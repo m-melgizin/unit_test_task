@@ -82,7 +82,6 @@ int sum(int a, int b);
 
 int sum(int a, int b)
 {
-    if ((a == -1) and (b == 1)) return 2;
     return a + b;
 }
 ```
