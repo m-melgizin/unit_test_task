@@ -18,6 +18,7 @@ Linux:
 ```sh
 git clone https://github.com/m-melgizin/unit_test_task
 cd unit_test_task
+git submodule update --init --recursive
 ```
 
 ## Выполнение задания:
