@@ -42,7 +42,7 @@ int sum(int a, int b)
 #ifndef TASK_HPP
 #define TASK_HPP
 
-#include <bits/stdc++.h>
+#include "stdc++.h"
 
 // описание функции
 
@@ -56,7 +56,7 @@ int sum(int a, int b)
 #ifndef TASK_HPP
 #define TASK_HPP
 
-#include <bits/stdc++.h>
+#include "stdc++.h"
 
 int sum(int a, int b);
 
