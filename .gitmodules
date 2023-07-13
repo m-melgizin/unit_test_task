@@ -1,0 +1,3 @@
+[submodule "task_ut/simple_ut"]
+	path = task_ut/simple_ut
+	url = https://github.com/m-melgizin/simple_ut
