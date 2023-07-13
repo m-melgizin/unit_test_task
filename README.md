@@ -2,7 +2,7 @@
 
 ## Требования:
 
- * [git](https://git-scm.com/)
+ * [git](https://git-scm.com/downloads)
  * [cmake](https://cmake.org/download/) >= 3.26
 
 Windows:
