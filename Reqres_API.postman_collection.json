@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "2792c81c-0ba7-45b8-8597-febd6db52ea5",
+		"_postman_id": "226ff36d-a2b1-4a8a-8b91-3887a9b032d2",
 		"name": "Reqres_API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "28533456"
+		"_exporter_id": "28543217"
 	},
 	"item": [
 		{
@@ -11,6 +11,67 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=1&per_page=5",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/user/{id}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"user",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"job\": \"QA engineer\"\r\n}"
+				},
 				"url": {
 					"raw": "https://reqres.in/api/users",
 					"protocol": "https",
@@ -27,38 +88,22 @@
 			"response": []
 		},
 		{
-			"name": "Fetch a user",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://reqres.in/api/user?id=1",
-					"protocol": "https",
-					"host": [
-						"reqres",
-						"in"
-					],
-					"path": [
-						"api",
-						"user"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Update a user",
 			"request": {
-				"method": "POST",
-				"header": [],
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jane Smith\",\r\n    \"job\": \"Designer\"\r\n}"
+				},
 				"url": {
-					"raw": "https://reqres.in/api/user?id=1",
+					"raw": "https://reqres.in/api/user/{id}",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -66,13 +111,8 @@
 					],
 					"path": [
 						"api",
-						"user"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+						"user",
+						"{id}"
 					]
 				}
 			},
@@ -84,7 +124,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://reqres.in/api/user?id=1",
+					"raw": "https://reqres.in/api/user/{id}",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -92,13 +132,8 @@
 					],
 					"path": [
 						"api",
-						"user"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+						"user",
+						"{id}"
 					]
 				}
 			},
@@ -135,7 +170,7 @@
 			"response": []
 		},
 		{
-			"name": "Create a user",
+			"name": "Register a user",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -184,6 +219,12 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
 		}
 	]
 }
